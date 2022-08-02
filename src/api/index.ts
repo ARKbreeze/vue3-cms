@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 
 /**
  * axios
@@ -27,8 +27,8 @@ import axios from 'axios';
  *
  */
 
-interface DateType {
-  data: any;
-  returnCode: string;
-  success: boolean;
-}
+// interface DateType {
+//   data: any;
+//   returnCode: string;
+//   success: boolean;
+// }
