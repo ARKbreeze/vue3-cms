@@ -1,21 +1,35 @@
 {
   "compilerOptions": {
+    //编译选项
+    //生成目标的对应代码 es5/esnext
     "target": "esnext",
+    // 生成目标代码的模块格式 cjs esm
     "module": "esnext",
+    //严格模式
     "strict": true,
+    // jsx如何转化    preserve不转化   babel已经转化了
     "jsx": "preserve",
+    // node解析模块规则
     "moduleResolution": "node",
+    //跳过对一些库的类型检测
     "skipLibCheck": true,
+    // 混合cjs跟esm一起使用
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
+    //映射文件
     "sourceMap": true,
+    //解析路径
     "baseUrl": ".",
+    //
     "types": ["webpack-env"],
+    //路径解析
+    //别名需要修改这个东西 保持一致
     "paths": {
       "@/*": ["src/*"]
     },
+    //使用指定库的类型
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
@@ -27,3 +41,7 @@
   ],
   "exclude": ["node_modules"]
 }
+
+// include  需要解析的文件
+
+// exclude  当include使用exclude里的时候忽略  比如引用了axios 那么也会去解析,加入就会忽略 但是具体使用到的代码还是会检查,但是并不会全部检查
